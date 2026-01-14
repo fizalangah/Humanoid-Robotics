@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Merriweather:wght@400;700&family=Inter:wght@400;700&display=swap');
+
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #3f2e00; /* Deep Navy Blue */
+  --ifm-color-primary-dark: #252800;
+  --ifm-color-primary-darker: #0f1200;
+  --ifm-color-primary-darkest: #000000;
+  --ifm-color-primary-light: #bea430; /* Electric Blue */
+  --ifm-color-primary-lighter: #dddb50;
+  --ifm-color-primary-lightest: #fad570;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  --ifm-font-family-base: 'Inter', 'Roboto', sans-serif;
+  --ifm-font-family-headings: 'Merriweather', 'Georgia', serif;
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #b5be30; /* Electric Blue */
+  --ifm-color-primary-dark: #a2ad10;
+  --ifm-color-primary-darker: #8c9c00;
+  --ifm-color-primary-darkest: #3f3e00; /* Deep Navy Blue */
+  --ifm-color-primary-light: #ddd450;
+  --ifm-color-primary-lighter: #f8fa70;
+  --ifm-color-primary-lightest: #ebff90;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
+/* Glassmorphism styles */
+.glass-card {
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 15px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  box-shadow: 0 8px 32px 0 rgba(133, 135, 31, 0.37);
+  padding: 20px;
+  margin: 10px;
+}
+
+/* Dark mode adjustments for glass-card */
+[data-theme='dark'] .glass-card {
+  background: rgba(59, 63, 0, 0.75); /* Deep Navy with transparency */
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  border: 1px solid rgba(152, 190, 48, 0.5); /* Electric Blue with transparency */
+}
+
+.button--secondary {
+  font-weight: bold;
+  font-size: 1.25rem;
+  padding: 1rem 2rem;
+  background-image: linear-gradient(45deg, var(--ifm-color-primary-light), var(--ifm-color-primary-lighter));
+  transition: transform 0.2s ease-in-out;
+}
+
+.button--secondary:hover {
+  transform: scale(1.05);
+}

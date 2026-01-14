@@ -1,0 +1,141 @@
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2000;
+  backdrop-filter: blur(5px);
+}
+
+.modalContent {
+  background: var(--ifm-card-background-color);
+  padding: 25px;
+  border-radius: 15px;
+  width: 90%;
+  max-width: 500px;
+  position: relative;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.3);
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.modalClose {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: var(--ifm-color-emphasis-700);
+}
+
+.modalHeader h2 {
+  margin: 0 0 20px 0;
+  text-align: center;
+  color: var(--ifm-color-primary);
+}
+
+.selectGroup {
+  margin-bottom: 15px;
+}
+
+.selectGroup label {
+  display: block;
+  margin-bottom: 5px;
+  font-weight: bold;
+}
+
+.selectInput {
+  width: 100%;
+  padding: 10px;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  background: var(--ifm-background-surface-color);
+  color: var(--ifm-font-color-base);
+}
+
+.modalButton {
+  width: 100%;
+  padding: 12px;
+  background: var(--ifm-color-primary);
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-weight: bold;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.modalButton:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.resultArea {
+  margin-top: 20px;
+  padding: 15px;
+  background: var(--ifm-background-color);
+  border-radius: 8px;
+  max-height: 300px;
+  overflow-y: auto;
+  border: 1px solid var(--ifm-color-emphasis-200);
+}
+
+.spinner {
+  border: 4px solid rgba(0,0,0,0.1);
+  width: 36px;
+  height: 36px;
+  border-radius: 50%;
+  border-left-color: var(--ifm-color-primary);
+  animation: spin 1s ease infinite;
+  margin: 0 auto;
+}
+
+@keyframes spin {
+  0% { transform: rotate(0deg); }
+  100% { transform: rotate(360deg); }
+}
+
+/* Toolbar Button */
+.toolbar {
+  position: fixed;
+  z-index: 1000;
+  display: flex;
+  gap: 10px;
+}
+
+.toolbarDesktop {
+  top: 5px;
+  right: 200px;
+
+}
+
+.toolbarMobile {
+  bottom: 20px;
+  left: 20px;
+}
+
+.toolbar button {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background-color: transparent; /* Changed to transparent */
+  color: var(--ifm-color-primary); /* Changed to fit theme */
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  box-shadow: none; /* Removed box-shadow */
+  transition: transform 0.2s;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.toolbar button:hover {
+  transform: scale(1.1);
+}

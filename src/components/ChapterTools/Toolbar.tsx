@@ -44,7 +44,7 @@ const Toolbar = () => {
     setTranslationResult(''); 
     
     try {
-      const response = await fetch('http://127.0.0.1:8000/translate', {
+      const response = await fetch('https://humanoid-robotics-z4hw.onrender.com/translate', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ language, chapter_id: chapter }),
